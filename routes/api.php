@@ -3,7 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ContactoController;
+use App\Http\Controllers\Api\UsuarioController;
+
 use App\Models\Contacto;
+use App\Models\Usuario;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +20,16 @@ use App\Models\Contacto;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::get("/contactget",[ContactoController::class,"read"]);
-Route::post("/contactcreate",[ContactoController::class,"create"]);
-Route::put("/contactput",[ContactoController::class,"put"]);
-Route::delete("/contactdelete",[ContactoController::class,"delete"]);
+
+Route::get("/usuario",[UsuarioController::class,"read"]);
+Route::post("/usuario",[UsuarioController::class,"create"]);
+Route::put("/usuario",[UsuarioController::class,"update"]);
+Route::delete("/usuario",[UsuarioController::class,"delete"]);
+
+Route::get("/contact",[ContactoController::class,"read"]);
+Route::post("/contact",[ContactoController::class,"create"]);
+Route::put("/contact",[ContactoController::class,"update"]);
+Route::delete("/contact",[ContactoController::class,"delete"]);
 
 
 

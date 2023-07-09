@@ -30,7 +30,6 @@ class ContactoController extends Controller
         $message = ["message" =>"Registrado!!"];
         return response()->json($message,Response::HTTP_CREATED);
     
-
     }
 
     public function update(Request $request){
